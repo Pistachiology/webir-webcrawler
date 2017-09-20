@@ -46,7 +46,7 @@ func main() {
 		"http://www.ku.ac.th/web2012/index.php?c=adms&m=mainpage1",
 	// "http://mirror1.ku.ac.th/",
 	)
-	reFilterByDomainKU, err := regexp.Compile(`^https?://.*?\.ku.ac.th(/.*)?`)
+	reFilterByDomainKU, err := regexp.Compile(`^https?://[a-zA-Z0-9\.]*\.ku.ac.th(/.*)?$`)
 	if err != nil {
 		panic("Filter domain ku is not working !")
 	}
